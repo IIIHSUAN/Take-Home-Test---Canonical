@@ -1,4 +1,4 @@
-hello (2.10-2ubuntu3) UNRELEASED; urgency=medium
+hello (2.10-2ubuntu3) jammy; urgency=medium
 
   * Take Home Test for I-Hsuan Su.
   * Show personal messages during the installation.

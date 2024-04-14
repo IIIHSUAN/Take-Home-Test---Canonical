@@ -478,7 +478,7 @@ configure:7684: $? = 0
 configure:7684: result: yes
 configure:7684: checking for _set_invalid_parameter_handler
 configure:7684: gcc -o conftest -g -O2 -ffile-prefix-map=/home/hsuan/hello/hello-2.10=. -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro conftest.c  >&5
-/usr/bin/ld: /tmp/ccx7HAHV.ltrans0.ltrans.o: in function `main':
+/usr/bin/ld: /tmp/ccHvQ4pX.ltrans0.ltrans.o: in function `main':
 ./conftest.c:73: undefined reference to `_set_invalid_parameter_handler'
 collect2: error: ld returned 1 exit status
 configure:7684: $? = 1
