@@ -1,3 +1,11 @@
+hello (2.10-2ubuntu3) UNRELEASED; urgency=medium
+
+  * Take Home Test for I-Hsuan Su.
+  * Show personal messages during the installation.
+  * Add a testing.sh as an executable script installed on the system.
+
+ -- I-Hsuan Su <h.s.u.a.n@outlook.com>  Sun, 14 Apr 2024 22:35:50 +0800
+
 hello (2.10-2ubuntu2) eoan; urgency=medium
 
   * Handle exit code 77 for skipped autopkgtests.

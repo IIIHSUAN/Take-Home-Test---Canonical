@@ -1,7 +1,7 @@
-56be38567b94e58047fb83f03c52d92e  usr/bin/hello
+6906a70e8a702c3df4204564cd661af4  usr/bin/hello
 8966388caf79fca8d784caee40000912  usr/bin/testing.sh
 9dbc678a728a0936b503c0aef4507f5d  usr/share/doc/hello/NEWS.gz
-efb261df8af26e221311d2b90668c5f9  usr/share/doc/hello/changelog.Debian.gz
+4d565b6f92231a9a58f0d441784bda5f  usr/share/doc/hello/changelog.Debian.gz
 bf4bad78d5cf6787c6512b69f29be7fa  usr/share/doc/hello/copyright
 0f2f96d11d6f0ef82b0dbfe690a3622b  usr/share/info/hello.info.gz
 0b430a48c9a900421c8d2a48e864a0a5  usr/share/locale/bg/LC_MESSAGES/hello.mo
@@ -46,4 +46,4 @@ cb7d0a0764e3e99fc4e019d2c5a13407  usr/share/locale/th/LC_MESSAGES/hello.mo
 999427d7a8201686fe762b67ba46d5fa  usr/share/locale/vi/LC_MESSAGES/hello.mo
 3412236ad26b72a47a115d37f60a2035  usr/share/locale/zh_CN/LC_MESSAGES/hello.mo
 e01adda51cadfcb61eb3eb23adf94bb5  usr/share/locale/zh_TW/LC_MESSAGES/hello.mo
-4acd4848fddcae12efa1ffc7c799d91c  usr/share/man/man1/hello.1.gz
+3992424e31f309de8689ad3d514bc2b1  usr/share/man/man1/hello.1.gz
