@@ -27,24 +27,11 @@ uname -v = #1 SMP Fri Jan 27 02:56:13 UTC 2023
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
-PATH: /usr/local/sbin/
-PATH: /usr/local/bin/
 PATH: /usr/sbin/
 PATH: /usr/bin/
 PATH: /sbin/
 PATH: /bin/
-PATH: /usr/games/
-PATH: /usr/local/games/
-PATH: /usr/lib/wsl/lib/
-PATH: /mnt/c/Windows/system32/
-PATH: /mnt/c/Windows/
-PATH: /mnt/c/Windows/System32/Wbem/
-PATH: /mnt/c/Windows/System32/WindowsPowerShell/v1.0/
-PATH: /mnt/c/Windows/System32/OpenSSH/
-PATH: /mnt/c/Program Files/Git/cmd/
-PATH: /mnt/c/Users/88693/AppData/Local/Microsoft/WindowsApps/
-PATH: /mnt/c/Users/88693/AppData/Local/Programs/Microsoft VS Code/bin/
-PATH: /snap/bin/
+PATH: /usr/bin/X11/
 
 
 ## ----------- ##
@@ -491,7 +478,7 @@ configure:7684: $? = 0
 configure:7684: result: yes
 configure:7684: checking for _set_invalid_parameter_handler
 configure:7684: gcc -o conftest -g -O2 -ffile-prefix-map=/home/hsuan/hello/hello-2.10=. -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro conftest.c  >&5
-/usr/bin/ld: /tmp/ccPHpE1g.ltrans0.ltrans.o: in function `main':
+/usr/bin/ld: /tmp/ccciuSVE.ltrans0.ltrans.o: in function `main':
 ./conftest.c:73: undefined reference to `_set_invalid_parameter_handler'
 collect2: error: ld returned 1 exit status
 configure:7684: $? = 1
