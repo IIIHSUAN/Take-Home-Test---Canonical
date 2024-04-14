@@ -1,0 +1,39 @@
+Description: Compatibility Changes.
+ Version Changes.
+ .
+ hello (2.10-2ubuntu2) eoan; urgency=medium
+ .
+   * Handle exit code 77 for skipped autopkgtests.
+Author: Steve Langasek <steve.langasek@ubuntu.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2024-04-13
+
+--- hello-2.10.orig/doc/stamp-vti
++++ hello-2.10/doc/stamp-vti
+@@ -1,4 +1,4 @@
+ @set UPDATED 19 July 2014
+ @set UPDATED-MONTH July 2014
+-@set EDITION 2.10
+-@set VERSION 2.10
++@set EDITION 
++@set VERSION 
+--- hello-2.10.orig/doc/version.texi
++++ hello-2.10/doc/version.texi
+@@ -1,4 +1,4 @@
+ @set UPDATED 19 July 2014
+ @set UPDATED-MONTH July 2014
+-@set EDITION 2.10
+-@set VERSION 2.10
++@set EDITION 
++@set VERSION 
