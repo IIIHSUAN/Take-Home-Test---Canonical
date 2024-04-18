@@ -45,12 +45,12 @@ DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
 
 CLEANFILES =
 
-#if !GIT_CROSS_COMPILING
+if !GIT_CROSS_COMPILING
 man_MANS = hello.1
 EXTRA_DIST += $(man_MANS)
-#endif
+endif
 
-#if BUILD_FROM_GIT
+# if BUILD_FROM_GIT
 hello.1: hello
 	$(HELP2MAN) --include=$(top_srcdir)/man/hello.x $(top_builddir)/hello -o $@-t
 	chmod a=r $@-t

@@ -18,8 +18,8 @@ Forwarded: <no|not-needed|url proving that it has been forwarded>
 Reviewed-By: <name and email of someone who approved the patch>
 Last-Update: 2024-04-14
 
---- hello-2.10.orig/build-aux/config.guess
-+++ hello-2.10/build-aux/config.guess
+--- a/build-aux/config.guess
++++ b/build-aux/config.guess
 @@ -1,14 +1,12 @@
  #! /bin/sh
  # Attempt to guess a canonical system name.
@@ -38,7 +38,7 @@ Last-Update: 2024-04-14
  # (at your option) any later version.
  #
  # This program is distributed in the hope that it will be useful, but
-@@ -17,7 +15,7 @@ timestamp='2022-01-09'
+@@ -17,7 +15,7 @@
  # General Public License for more details.
  #
  # You should have received a copy of the GNU General Public License
@@ -47,7 +47,7 @@ Last-Update: 2024-04-14
  #
  # As a special exception to the GNU General Public License, if you
  # distribute this file as part of a program that contains a
-@@ -26,20 +24,12 @@ timestamp='2022-01-09'
+@@ -26,20 +24,12 @@
  # program.  This Exception is an additional permission under section 7
  # of the GNU General Public License, version 3 ("GPLv3").
  #
@@ -71,7 +71,7 @@ Last-Update: 2024-04-14
  
  
  me=`echo "$0" | sed -e 's,.*/,,'`
-@@ -49,7 +39,7 @@ Usage: $0 [OPTION]
+@@ -49,7 +39,7 @@
  
  Output the configuration name of the system \`$me' is run on.
  
@@ -80,7 +80,7 @@ Last-Update: 2024-04-14
    -h, --help         print this help, then exit
    -t, --time-stamp   print date of last modification, then exit
    -v, --version      print version number, then exit
-@@ -60,7 +50,7 @@ version="\
+@@ -60,7 +50,7 @@
  GNU config.guess ($timestamp)
  
  Originally written by Per Bothner.
@@ -89,7 +89,7 @@ Last-Update: 2024-04-14
  
  This is free software; see the source for copying conditions.  There is NO
  warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
-@@ -94,8 +84,7 @@ if test $# != 0; then
+@@ -94,8 +84,7 @@
    exit 1
  fi
  
@@ -99,7 +99,7 @@ Last-Update: 2024-04-14
  
  # CC_FOR_BUILD -- compiler used by this script. Note that the use of a
  # compiler to aid in system detection is discouraged as it requires
-@@ -107,90 +96,66 @@ GUESS=
+@@ -107,90 +96,66 @@
  
  # Portable tmp directory creation inspired by the Autoconf team.
  
@@ -225,7 +225,7 @@ Last-Update: 2024-04-14
      *:NetBSD:*:*)
  	# NetBSD (nbsd) targets should (where applicable) match one or
  	# more of the tuples: *-*-netbsdelf*, *-*-netbsdaout*,
-@@ -202,32 +167,22 @@ case $UNAME_MACHINE:$UNAME_SYSTEM:$UNAME
+@@ -202,32 +167,22 @@
  	#
  	# Note: NetBSD doesn't particularly care about the vendor
  	# portion of the name.  We always set it to "unknown".
@@ -266,7 +266,7 @@ Last-Update: 2024-04-14
  		if echo __ELF__ | $CC_FOR_BUILD -E - 2>/dev/null \
  			| grep -q __ELF__
  		then
-@@ -242,80 +197,45 @@ case $UNAME_MACHINE:$UNAME_SYSTEM:$UNAME
+@@ -242,80 +197,45 @@
  		os=netbsd
  		;;
  	esac
@@ -363,7 +363,7 @@ Last-Update: 2024-04-14
  	case $UNAME_RELEASE in
  	*4.0)
  		UNAME_RELEASE=`/usr/sbin/sizer -v | awk '{print $3}'`
-@@ -329,158 +249,163 @@ case $UNAME_MACHINE:$UNAME_SYSTEM:$UNAME
+@@ -329,158 +249,163 @@
  	# covers most systems running today.  This code pipes the CPU
  	# types through head -n 1, so we only detect the type of CPU 0.
  	ALPHA_CPU_TYPE=`/usr/sbin/psrinfo -v | sed -n -e 's/^  The alpha \(.*\) processor.*$/\1/p' | head -n 1`
@@ -611,7 +611,7 @@ Last-Update: 2024-04-14
      # The situation for MiNT is a little confusing.  The machine name
      # can be virtually everything (everything which is not
      # "atarist" or "atariste" at least should have a processor
-@@ -490,44 +415,44 @@ case $UNAME_MACHINE:$UNAME_SYSTEM:$UNAME
+@@ -490,44 +415,44 @@
      # MiNT.  But MiNT is downward compatible to TOS, so this should
      # be no problem.
      atarist[e]:*MiNT:*:* | atarist[e]:*mint:*:* | atarist[e]:*TOS:*:*)
@@ -682,7 +682,7 @@ Last-Update: 2024-04-14
  #ifdef __cplusplus
  #include <stdio.h>  /* for printf() prototype */
  	int main (int argc, char *argv[]) {
-@@ -536,96 +461,95 @@ case $UNAME_MACHINE:$UNAME_SYSTEM:$UNAME
+@@ -536,96 +461,95 @@
  #endif
  	#if defined (host_mips) && defined (MIPSEB)
  	#if defined (SYSTYPE_SYSV)
@@ -828,7 +828,7 @@ Last-Update: 2024-04-14
  		#include <sys/systemcfg.h>
  
  		main()
-@@ -636,77 +560,76 @@ EOF
+@@ -636,77 +560,76 @@
  			exit(0);
  			}
  EOF
@@ -948,7 +948,7 @@ Last-Update: 2024-04-14
  
  		#define _HPUX_SOURCE
  		#include <stdlib.h>
-@@ -739,13 +662,13 @@ EOF
+@@ -739,13 +662,13 @@
  		    exit (0);
  		}
  EOF
@@ -965,7 +965,7 @@ Last-Update: 2024-04-14
  
  	    # hppa2.0w-hp-hpux* has a 64-bit kernel and a compiler generating
  	    # 32-bit code.  hppa64-hp-hpux* has the same kernel and a compiler
-@@ -756,23 +679,23 @@ EOF
+@@ -756,23 +679,23 @@
  	    # $ CC_FOR_BUILD="cc +DA2.0w" ./config.guess
  	    # => hppa64-hp-hpux11.23
  
@@ -999,7 +999,7 @@ Last-Update: 2024-04-14
  	#include <unistd.h>
  	int
  	main ()
-@@ -797,38 +720,38 @@ EOF
+@@ -797,38 +720,38 @@
  	  exit (0);
  	}
  EOF
@@ -1061,7 +1061,7 @@ Last-Update: 2024-04-14
      C2*:ConvexOS:*:* | convex:ConvexOS:C2*:*)
  	if getsysinfo -f scalar_acc
  	then echo c32-convex-bsd
-@@ -836,148 +759,139 @@ EOF
+@@ -836,148 +759,139 @@
  	fi
  	exit ;;
      C34*:ConvexOS:*:* | convex:ConvexOS:C34*:*)
@@ -1301,7 +1301,7 @@ Last-Update: 2024-04-14
  	  EV5)   UNAME_MACHINE=alphaev5 ;;
  	  EV56)  UNAME_MACHINE=alphaev56 ;;
  	  PCA56) UNAME_MACHINE=alphapca56 ;;
-@@ -987,226 +901,172 @@ EOF
+@@ -987,226 +901,172 @@
  	  EV68*) UNAME_MACHINE=alphaev68 ;;
  	esac
  	objdump --private-headers /bin/sh | grep -q ld.so.1
@@ -1623,7 +1623,7 @@ Last-Update: 2024-04-14
      i*86:*:5:[678]*)
  	# UnixWare 7.x, OpenUNIX and OpenServer 6.
  	case `/bin/uname -X | grep "^Machine"` in
-@@ -1214,12 +1074,12 @@ EOF
+@@ -1214,12 +1074,12 @@
  	    *Pentium)	     UNAME_MACHINE=i586 ;;
  	    *Pent*|*Celeron) UNAME_MACHINE=i686 ;;
  	esac
@@ -1639,7 +1639,7 @@ Last-Update: 2024-04-14
  	elif /bin/uname -X 2>/dev/null >/dev/null ; then
  		UNAME_REL=`(/bin/uname -X|grep Release|sed -e 's/.*= //')`
  		(/bin/uname -X|grep i80486 >/dev/null) && UNAME_MACHINE=i486
-@@ -1229,43 +1089,43 @@ EOF
+@@ -1229,43 +1089,43 @@
  			&& UNAME_MACHINE=i686
  		(/bin/uname -X|grep '^Machine.*Pentium Pro' >/dev/null) \
  			&& UNAME_MACHINE=i686
@@ -1702,7 +1702,7 @@ Last-Update: 2024-04-14
      M68*:*:R3V[5678]*:*)
  	test -r /sysV68 && { echo 'm68k-motorola-sysv'; exit; } ;;
      3[345]??:*:4.0:3.0 | 3[34]??A:*:4.0:3.0 | 3[34]??,*:*:4.0:3.0 | 3[34]??/*:*:4.0:3.0 | 4400:*:4.0:3.0 | 4850:*:4.0:3.0 | SKA40:*:4.0:3.0 | SDS2:*:4.0:3.0 | SHG2:*:4.0:3.0 | S7501*:*:4.0:3.0)
-@@ -1273,9 +1133,9 @@ EOF
+@@ -1273,9 +1133,9 @@
  	test -r /etc/.relid \
  	&& OS_REL=.`sed -n 's/[^ ]* [^ ]* \([0-9][0-9]\).*/\1/p' < /etc/.relid`
  	/bin/uname -p 2>/dev/null | grep 86 >/dev/null \
@@ -1714,7 +1714,7 @@ Last-Update: 2024-04-14
      3[34]??:*:4.0:* | 3[34]??,*:*:4.0:*)
  	/bin/uname -p 2>/dev/null | grep 86 >/dev/null \
  	  && { echo i486-ncr-sysv4; exit; } ;;
-@@ -1284,441 +1144,248 @@ EOF
+@@ -1284,441 +1144,248 @@
  	test -r /etc/.relid \
  	    && OS_REL=.`sed -n 's/[^ ]* [^ ]* \([0-9][0-9]\).*/\1/p' < /etc/.relid`
  	/bin/uname -p 2>/dev/null | grep 86 >/dev/null \
@@ -2312,7 +2312,7 @@ Last-Update: 2024-04-14
  
  config.guess timestamp = $timestamp
  
-@@ -1737,17 +1404,16 @@ hostinfo               = `(hostinfo) 2>/
+@@ -1737,17 +1404,16 @@
  /usr/bin/oslevel       = `(/usr/bin/oslevel) 2>/dev/null`
  /usr/convex/getsysinfo = `(/usr/convex/getsysinfo) 2>/dev/null`
  
@@ -2335,8 +2335,8 @@ Last-Update: 2024-04-14
  # time-stamp-start: "timestamp='"
  # time-stamp-format: "%:y-%02m-%02d"
  # time-stamp-end: "'"
---- hello-2.10.orig/build-aux/config.sub
-+++ hello-2.10/build-aux/config.sub
+--- a/build-aux/config.sub
++++ b/build-aux/config.sub
 @@ -1,14 +1,12 @@
  #! /bin/sh
  # Configuration validation subroutine script.
@@ -2355,7 +2355,7 @@ Last-Update: 2024-04-14
  # (at your option) any later version.
  #
  # This program is distributed in the hope that it will be useful, but
-@@ -17,7 +15,7 @@ timestamp='2022-01-03'
+@@ -17,7 +15,7 @@
  # General Public License for more details.
  #
  # You should have received a copy of the GNU General Public License
@@ -2364,7 +2364,7 @@ Last-Update: 2024-04-14
  #
  # As a special exception to the GNU General Public License, if you
  # distribute this file as part of a program that contains a
-@@ -27,7 +25,7 @@ timestamp='2022-01-03'
+@@ -27,7 +25,7 @@
  # of the GNU General Public License, version 3 ("GPLv3").
  
  
@@ -2373,7 +2373,7 @@ Last-Update: 2024-04-14
  #
  # Configuration subroutine to validate and canonicalize a configuration type.
  # Supply the specified configuration type as an argument.
-@@ -35,7 +33,7 @@ timestamp='2022-01-03'
+@@ -35,7 +33,7 @@
  # Otherwise, we print the canonical config type on stdout and succeed.
  
  # You can get the latest version of this script from:
@@ -2382,7 +2382,7 @@ Last-Update: 2024-04-14
  
  # This file is supposed to be the same for all GNU packages
  # and recognize all the CPU types, system types and aliases
-@@ -52,21 +50,15 @@ timestamp='2022-01-03'
+@@ -52,21 +50,15 @@
  #	CPU_TYPE-MANUFACTURER-KERNEL-OPERATING_SYSTEM
  # It is wrong to echo any other type of specification.
  
@@ -2407,7 +2407,7 @@ Last-Update: 2024-04-14
    -h, --help         print this help, then exit
    -t, --time-stamp   print date of last modification, then exit
    -v, --version      print version number, then exit
-@@ -76,7 +68,7 @@ Report bugs and patches to <config-patch
+@@ -76,7 +68,7 @@
  version="\
  GNU config.sub ($timestamp)
  
@@ -2416,7 +2416,7 @@ Last-Update: 2024-04-14
  
  This is free software; see the source for copying conditions.  There is NO
  warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
-@@ -98,12 +90,12 @@ while test $# -gt 0 ; do
+@@ -98,12 +90,12 @@
      - )	# Use stdin as input.
         break ;;
      -* )
@@ -2431,7 +2431,7 @@ Last-Update: 2024-04-14
         exit ;;
  
      * )
-@@ -119,1186 +111,1226 @@ case $# in
+@@ -119,1186 +111,1226 @@
      exit 1;;
  esac
  
@@ -4660,7 +4660,7 @@ Last-Update: 2024-04-14
  		;;
  	*)
  		;;
-@@ -1306,215 +1338,200 @@ esac
+@@ -1306,215 +1338,200 @@
  
  # Decode manufacturer-specific aliases for certain operating systems.
  
@@ -5017,7 +5017,7 @@ Last-Update: 2024-04-14
  else
  
  # Here we handle the default operating systems that come with various machines.
-@@ -1527,363 +1544,261 @@ else
+@@ -1527,363 +1544,261 @@
  # will signal an error saying that MANUFACTURER isn't an operating
  # system, and we'll never get to this point.
  

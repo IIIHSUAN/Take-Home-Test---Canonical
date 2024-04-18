@@ -1,0 +1,41 @@
+Description: hello.1 building issue in make
+ .
+ hello (2.10-2ubuntu3) jammy; urgency=medium
+ .
+   * Take Home Test for I-Hsuan Su.
+   * Show personal messages during the installation.
+   * Add a testing.sh as an executable script installed on the system.
+Author: I-Hsuan Su <h.s.u.a.n@outlook.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2024-04-18
+
+--- hello-2.10.orig/Makefile.am
++++ hello-2.10/Makefile.am
+@@ -50,14 +50,14 @@ man_MANS = hello.1
+ EXTRA_DIST += $(man_MANS)
+ endif
+ 
+-if BUILD_FROM_GIT
++# if BUILD_FROM_GIT
+ hello.1: hello
+ 	$(HELP2MAN) --include=$(top_srcdir)/man/hello.x $(top_builddir)/hello -o $@-t
+ 	chmod a=r $@-t
+ 	mv -f $@-t $@
+ 
+ CLEANFILES += $(man_MANS)
+-endif
++#endif
+ 
+ TESTS = \
+ 	tests/greeting-1 \
